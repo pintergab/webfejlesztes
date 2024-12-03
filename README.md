@@ -1,7 +1,7 @@
 # webfejlesztes
 1. Az oldal készítője: Pintér Gabriella
 
-2. A weblap URL címe: 
+2. A weblap URL címe: https://pintergab.github.io/webfejlesztes/
 
 3.A Móni Nails weboldal megalkotásához keresztanyukám volt az inspiráció.A weboldalon található egy részletesen leírás a szolgáltatásokról, egy árlista, illetve egy képgaléria,amely a korábbi munkáit mutatja be, inspirációt nyújtva a látogatók számára.
 
