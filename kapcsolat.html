@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pintér Gabriella">
+    <meta name="description" content="Időpontfoglalás és elérhetőségek">
+    <title>Móni Nails</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="kepek/galeria/favikon.ico">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           $(".idopont").validate({
+            rules: {
+             vez: "required",
+             ker: "required",
+             e:{
+              required: true,
+              email: true
+             },
+             telszam:{
+                pattern: /^(\+36|06)[1-9]\d{7,8}$/,
+                required: true,
+             },
+             valaszt:{
+                required:true,
+             },
+             ped:{
+                required:true,
+             },
+             keres:{
+                required:true,
+             },
+            elfogad:{
+              required: true,
+             },
+
+
+            },
+            messages: {
+             vez: "<br>Kérlek, írd be a vezetékneved!",
+             ker:"<br>Kérlek, írd be a keresztneved!",
+             ped:"Kérlek, válassz!",
+             keres: "<br>A speciális kéréseidet írd meg!<br>Ha nincs azt is!",
+            e:
+            "<br>Kérlek valós e-mail címet adj meg!",
+            telszam: "<br>Add meg a telefonszámod!",
+            elfogad:
+            "Kérlek fogadd el az etikettet!<br>",
+            },
+           });
+         });
+        </script>
+        <style>
+            label.error{
+                color:#fb6090;
+                margin: 5px;
+            }
+        </style>
+
+</head>
+<body>
+    <nav>
+        <a href="index.html">Főoldal</a>
+        <a href="szolgaltatasok.html">Szolgáltatások</a>
+        <a href="arak.html">Árak</a>
+        <a href="munkaim.html">Munkáim</a>
+        <a href="#" class="active">Kapcsolat</a>
+    </nav>
+<div class="container">
+    <div>
+    <form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" class="idopont">
+    <h1>Kérj időpontot most!</h1>
+        <label for="vez">Vezetéknév:</label>
+            <br>
+            <input type="text" name="vez" id="vez" size="20">
+        <br>
+        <label for="kereszt">Keresztnév:</label><br>
+            <input type="text" name="ker" id="kereszt" size="30">
+        <br>
+        <label for="e">E-mail</label><br>
+            <input type="email" name="e"  id="e" size="30">
+        <br>
+        <label for="telszam">Telefonszám:</label><br>
+            <input type="tel" name="telszam" id="telszam" size="30" placeholder="+36">
+        <br>
+        <label for="valaszt">Melyik szolgáltatást szeretnéd igénybe venni?</label>
+        <br>
+            <select name="valaszt" id="valaszt" size="1">
+                <option value="man" id="valaszt_manikur">Manikűr</option>
+                <option value="gellak" id="valaszt_gel">Gél lakkozás</option>
+                <option value="muk" id="valaszt_mu">Műköröm építés</option>
+                <option value="sem" id="valaszt_sem">A fentiek közül egyik sem</option>
+            </select>
+        <br>
+        Szeretnél pedikűrt?
+        <br>
+         <label for="pedi"><input type="radio" name="ped" id="pedi" value="i">Igen</label>
+            <br>
+           <label for="pedn"><input type="radio" name="ped" id="pedn" value="n">Nem</label>
+            <br>
+
+        <label for="keres">Kérlek a speciális kéréseket jelezd!</label>
+            <br>
+            <textarea rows="5" cols="40" name="keres" id="keres" placeholder="Szeretnék.../Nem szeretnék..."></textarea>
+        <br>
+         <label for="elfogad"><input type="checkbox" name="elfogad" id="elfogad">Az <a href="index.html#et">etikettet</a> elolvastam és megértettem</label>                     
+            <br>
+            <input type="submit" value="Küldés">
+            <input type="reset" value="Törlés">
+            </form>
+    </div> 
+    <div class="info">
+    <h1 class="bordo">
+        Itt találsz meg!
+    </h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2562.338508681826!2d19.057629070980795!3d47.48677718248334!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc4fe7412d8b%3A0x2477efbd52bdf31c!2zRsWRdsOhbSB0w6ly!5e0!3m2!1shu!2shu!4v1732894519395!5m2!1shu!2shu" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="terkep"></iframe>
+        <p>Tel: +36 70 013 4567</p>
+        <p>E-mail: moni.nails@nails.hu</p>
+    </div>
+    </div>
+<footer>
+    Nem egy valós szolgáltatás. Az oldal tanulmányi célú. Pintér Gabriella 2024
+</footer>   
+</body>
+</html>

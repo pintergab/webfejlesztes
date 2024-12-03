@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pintér Gabriella">
+    <meta name="description" content="Árak és ajándékutalvány választása">
+    <title>Móni Nails</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="kepek/galeria/favikon.ico">
+
+</head>
+<body>
+    <nav>
+        <a href="index.html">Főoldal</a>
+        <a href="szolgaltatasok.html">Szolgáltatások</a>
+        <a href="#" class="active">Árak</a>
+        <a href="munkaim.html">Munkáim</a>
+        <a href="kapcsolat.html">Kapcsolat</a>
+    </nav>
+<div class="container">
+        <div class="arak">
+            <h1>Árlista</h1>
+            <h3>Manikűrök</h3>
+            <ul>
+                <li>Klasszikus manikűr: 3 000 Ft</li>
+                <li>Japán manikűr: 3 500 Ft</li>
+                <li>Frissítő kézmasszázs: 1 500 Ft</li>
+            </ul>
+            <h3>Gél lakkozás</h3>
+            <ul>
+                <li>Gél lakk eltávolítás: 2 000 Ft</li>
+                <li>Gél lakkozás rövid körömre: 4 500 Ft</li>
+                <li>Gél lakkozás hosszú körömre: 5 500 Ft</li>
+                <li>Egyedi minták (körmönként): 500 Ft-tól</li>
+            </ul>
+            <h3>Műköröm építés</h3>
+            <ul>
+                <li>Rövid műköröm: 6 000 Ft</li>
+                <li>Közepes hosszúság: 7 500 Ft</li>
+                <li>Extra hosszú műköröm: 9 000 Ft</li>
+                <li>Francia stílus vagy ombre: + 1 500 Ft</li>
+            </ul>
+            <h3>Pedikűr</h3>
+            <ul>
+                <li>Klasszikus pedikűr: 5 000 Ft</li>
+                <li>Gél lakkozás lábra: 4 500 Ft</li>
+                <li>Spa pedikűr (masszázzsal és pakolással): 7 000 Ft</li>
+                <li>Köröm deformitás kezelése: 3 000 Ft-tól</li>
+            </ul>
+            <h3>Egyéb</h3>
+            <ul>
+            <li>Körömerősítés (zselé vagy akril): 3 000 Ft</li>
+            <li>Csillámpor, strasszkő díszítés (körmönként): 200 Ft-tól</li>
+            <li>Egyedi minták (körmönként): 500 Ft-tól</li>
+            </ul>
+        </div>
+<div class="utalvanyok">
+        <form name="utalvany" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" method="post">
+
+            <h1 id="cim">Ajándékutalványok</h1>
+        <div class="ajandek">
+            <h2>Ajándékutalvány 2000 Ft értékben</h2>
+            <p> <input type="number" id="ket_db" name="ket_db" value="0" min="0"> db<br></p>
+            <p><input type="button" value="Hozzáad" id="ketezer"></p>
+        </div>
+        <div class="ajandek">
+            <h2>Ajándékutalvány 5000 Ft értékben</h2>
+            <p><input type="number" id="ot_db" name="ot_db"  value="0" min="0"> db<br></p>
+            <p><input type="button" value="Hozzáad" id="otezer"></p>
+        </div>
+        <div class="ajandek">
+            <h2>Ajándékutalvány 10 000 Ft értékben</h2>
+            <p><input type="number" id="tiz_db" name="tiz_db"  value="0" min="0"> db<br></p>
+            <p><input type="button" value="Hozzáad" id="tizezer"></p>
+        </div>
+
+        <div class="ajandek">
+            <h2>Ajándékutalvány 20 000 Ft értékben</h2>
+            <p><input type="number" id="husz_db" name="husz_db"  value="0" min="0"> db<br></p>
+            <p><input type="button" value="Hozzáad" id="huszezer"></p>
+        </div>
+        <div class="osszesen">
+            <h2 id="ar"></h2>
+            <hr>
+            <h3 id="kosar"></h3> 
+                 <button id="kuka">Kosár ürítése</button>
+        </div>
+        <div>
+            <div class="osszesen">
+            <p>E-mail címed megadásával add le a rendelésed!</p>
+            <input type="email" size="40" name="em" required>
+            <p><input type="submit" value="Rendelés leadása" id="rendeles"></p>
+
+            </div>
+        </div>
+        </form> 
+    </div>  
+</div>
+    <footer>
+        Nem egy valós szolgáltatás. Az oldal tanulmányi célú. Pintér Gabriella 2024
+    </footer> 
+   <script src="scriptek/script2.js"></script>      
+   <script src="scriptek/script3.js"></script>
+    
+</body>
+</html>
